@@ -2,7 +2,7 @@
 __author__ = "730462650"
 
 secret_word = "python"
-guess = str = input("What is your 6-letter guess?: ")
+guess = input("What is your 6-letter guess?: ")
 
 while len(guess) != len(secret_word):
     guess = input("That was not 6 letters! Try again: ")
