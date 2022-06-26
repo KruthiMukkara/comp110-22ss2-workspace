@@ -4,6 +4,8 @@ __author__ = "730462650"
 secret_word = "python"
 guess = input("What is your 6-letter guess?: ")
 
+WHITE_BOX: str = "\U00002B1C"
+GREEN_BOX: str = "\U0001F7E9"
 while len(guess) != len(secret_word):
     guess = input("That was not 6 letters! Try again: ")
 
