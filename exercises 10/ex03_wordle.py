@@ -56,6 +56,7 @@ def main() -> None:
         print(resulting_emoji)
         if resulting_emoji == GREEN_BOX * length: 
             print(f"You won in {turn}/6 turns!")
+            quit()
         turn = turn + 1
     if turn > 6: 
         print("X/6 - Sorry, try again tomorrow!")
