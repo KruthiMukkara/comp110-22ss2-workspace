@@ -5,9 +5,9 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
+
 def contains_char(word: str, character: str) -> bool:
-    """Returns true if the single character is found 
-    at any index of word."""
+    """Finds the single character at any index of word."""
     assert len(character) == 1
     index: int = 0
     while index < len(word): 
@@ -15,6 +15,7 @@ def contains_char(word: str, character: str) -> bool:
             return True 
         index += 1
     return False 
+
 
 def emojified(guess: str, secret: str) -> str: 
     """Returns a colored emoji box based on accuracy 
@@ -36,12 +37,12 @@ def emojified(guess: str, secret: str) -> str:
     return resulting_emoji 
 
 
-def input_guess(length: int) -> input: 
+def input_guess(length: int) -> str: 
     """Given an integer, prompts user for guess of an
     expected length.""" 
-    guess = input(f"Enter a {length} character word: ")
+    guess = str(input(f"Enter a {length} character word: "))
     while len(guess) != length: 
-        guess = input(f"That wasn't {length} chars! Try again: ")
+        guess = str(input(f"That wasn't {length} chars! Try again: "))
     return guess 
 
                 
@@ -61,6 +62,7 @@ def main() -> None:
         turn = turn + 1
     if turn > 6: 
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
