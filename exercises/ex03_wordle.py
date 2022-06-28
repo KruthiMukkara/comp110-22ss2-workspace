@@ -18,8 +18,7 @@ def contains_char(word: str, character: str) -> bool:
 
 
 def emojified(guess: str, secret: str) -> str: 
-    """Returns a colored emoji box based on accuracy 
-    of guess."""
+    """Returns a colored emoji box based on accuracy of guess."""
     resulting_emoji: str = ""
     index: int = 0 
     assert len(guess) == len(secret)
@@ -38,8 +37,7 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(length: int) -> str: 
-    """Given an integer, prompts user for guess of an
-    expected length.""" 
+    """Given an integer, prompts user for guess of an expected lesngth.""" 
     guess = str(input(f"Enter a {length} character word: "))
     while len(guess) != length: 
         guess = str(input(f"That wasn't {length} chars! Try again: "))
@@ -52,7 +50,7 @@ def main() -> None:
     resulting_emoji: str = ""
     length: int = len(secret)
     turn: int = 1
-    while (turn <= 6) and (resulting_emoji != GREEN_BOX * 6): 
+    while (turn <= 6) and (resulting_emoji != GREEN_BOX * length): 
         print(f"=== Turn {turn}/6 ===")
         resulting_emoji = emojified(input_guess(length), secret)
         print(resulting_emoji)
