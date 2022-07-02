@@ -30,7 +30,7 @@ def sub(a: list[int], b: int, c: int) -> list[int]:
     if b < 0: 
         b = 0 
     if c - 1 > len(a):
-        c = len(a) 
+        c = len(a) - 1
     if len(a) == 0 or b > len(a) or c <= 0 or b == len(a):
         return []
     while b < c: 
