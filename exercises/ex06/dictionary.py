@@ -2,7 +2,6 @@
 __author__ = """730462650"""
 
 
-
 def invert(my_dict: dict[str, str]) -> dict[str, str]: 
     """Switches the key and value of a dictionary."""
     inverted_dict: dict[str, str] = dict() 
@@ -39,4 +38,3 @@ def count(list: list[str]) -> dict[str,int]:
         else: 
             dictionary[k] = 1
     return dictionary 
-
