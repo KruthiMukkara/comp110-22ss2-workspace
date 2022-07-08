@@ -1,4 +1,4 @@
-"""Ex06 - Dictionary Functions - Function Implementation"""
+"""Ex06 - Dictionary Functions - Function Implementation."""
 __author__ = """730462650"""
 
 
@@ -29,7 +29,7 @@ def favorite_color(my_dict: dict[str, str]) -> str:
     return my_fave
 
 
-def count(list: list[str]) -> dict[str,int]: 
+def count(list: list[str]) -> dict[str, int]: 
     """Count of the number of times that value appeared in input list."""
     dictionary: dict[str, int] = dict()
     for k in list: 
