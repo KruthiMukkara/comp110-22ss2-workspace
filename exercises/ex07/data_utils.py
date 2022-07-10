@@ -1,6 +1,8 @@
 """Dictionary related utility functions."""
 
+
 __author__ = "730462650"
+
 
 """Some helpful utility funtions for working with CSV files."""
 
@@ -28,18 +30,18 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     return result
 
 
-def columnar(row_table: list[dict[str,str]]) -> dict[str, list[str]]:
+def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Transform a row-oriented table to a column-oriented table"""
     result: dict[str, list[str]] = {}
 
-    first_row: dict[str,str] = row_table[0]
+    first_row: dict[str, str] = row_table[0]
     for column in first_row: 
         result[column] = column_values(row_table, column)
     return result 
 
 
 def head(my_dict: dict[str, list[str]], x: int) -> dict[str, list[str]]:
-    new_dict: dict() = {}
+    new_dict = {}
     """Produce a column-based table with only the first N rows of data for each column."""
     output: dict[str, list[str]] = {}
     for column in my_dict: 
