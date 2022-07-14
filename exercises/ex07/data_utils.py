@@ -10,7 +10,7 @@ __author__ = "730462650"
 from csv import DictReader
 
 
-def read_csv_rows(filename: str) -> list[dict[str,str]]:
+def read_csv_rows(filename: str) -> list[dict[str, str]]:
     """Read the rows of a cdv into a 'table'."""
     result: list[dict[str, str]] = []
     file_handle = open(filename, "r", encoding="utf8")
@@ -23,7 +23,7 @@ def read_csv_rows(filename: str) -> list[dict[str,str]]:
 
 def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     """Produce a list[str] of all values in a single column."""
-    result: list[str] =[]
+    result: list[str] = []
     for row in table: 
         item: str = row[column]
         result.append(item)
@@ -31,7 +31,7 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
 
 
 def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
-    """Transform a row-oriented table to a column-oriented table"""
+    """Transform a row-oriented table to a column-oriented table."""
     result: dict[str, list[str]] = {}
 
     first_row: dict[str, str] = row_table[0]
@@ -41,7 +41,6 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(my_dict: dict[str, list[str]], x: int) -> dict[str, list[str]]:
-    new_dict = {}
     """Produce a column-based table with only the first N rows of data for each column."""
     output: dict[str, list[str]] = {}
     for column in my_dict: 
@@ -54,7 +53,7 @@ def head(my_dict: dict[str, list[str]], x: int) -> dict[str, list[str]]:
 
 
 def select(my_dict: dict[str, list[str]], x: list[str]) -> dict[str, list[str]]:
-    """Makes a new column-based table with only a specific subset of original columns"""
+    """Makes a new column-based table with only a specific subset of original columns."""
     output: dict[str, list[str]] = {}
     for column in x: 
         output[column] = my_dict[column]
@@ -75,7 +74,7 @@ def concat(dictionary1: dict[str, list[str]], dictionary2: dict[str, list[str]])
 
 
 def count(x: list[str]) -> dict[str, int]:
-    """Counts the number of times a key has appeared in an input list"""
+    """Counts the number of times a key has appeared in an input list."""
     output: dict[str, int] = {}
     for item in x:
         if item in output:
